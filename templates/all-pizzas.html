@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<ul class="container">
+    <!-- Loops through every taco in Pizza -->
+    {% for item in pizzas %}
+    <li class="multiple-pizza pizza_td item_li rounded shadow">
+        <!-- Displays a Pizza image and name -->
+        <a href = "/pizza/{{ item[0] }}"><img class="pizza_img" src="{{ item[5]}}"/></a>
+        <h4 class="h4_center">{{ item[1]}}</h4>     
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
