@@ -1,180 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
-<p class="homepage">
-    Hello World!
-</p>
 
 <body>
     <h1 class="center main_title">WELCOME TO PIZZARIA ONLINE</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<!-- <div class="popup" id="popup"> -->
-    <div class="container touch_cancel">
-        <table class="setting table">
-            <!-- Tabs Detail -->
-            <tr>
-                <div class="tabs">
-                    <td class="setting_logo" data-tab-value="#tab_1"><span>🎨</span></td>
-                    <td class="setting_logo" data-tab-value="#tab_2"><span>☑️</span></td>
-                    <td class="setting_logo" data-tab-value="#tab_3"><span>📞</span></td>
-                    <td class="setting_logo" data-tab-value="#tab_4"><span>🎛️</span></td>
-                    <td class="setting_logo" data-tab-value="#tab_5"><span>🌐</span></td>
-                    <td class="setting_logo" style="padding-top:14px;" type="button" onclick="closePopup()">&times;</td>
-                </div>
-            </tr>
-            <tr>
-                <td colspan="6" style="border-radius: 20px;">
-            <!-- Tab content -->
-                    <div class="tab-content">
-                        <div class="tabs__tab" id="tab_1" data-tab-info>
-                            <br>
-                            <br>
-                            <h2 class="center setting_title setting_text">Change Theme</h2>
-                            <br>
-                            <br>
-                            <table class="center">
-                                <tr>
-                                    <td>
-                                        <form class="color_picker" action="">
-                                            <fieldset>
-                                                <legend class="visually_hidden">Pick A Theme</legend>
-                                                <label for="light" class="visually_hidden">Light</label>
-                                                <input type="radio" name="theme" id="light" checked>
-                                                
-                                                <label for="dark" class="visually_hidden">Dark</label>
-                                                <input type="radio" name="theme" id="dark">
-                                    
-                                                <label for="green" class="visually_hidden">Green</label>
-                                                <input type="radio" name="theme" id="green">
-                                    
-                                                <label for="brown" class="visually_hidden">Brown</label>    
-                                                <input type="radio" name="theme" id="brown">
-                                    
-                                                <label for="blue" class="visually_hidden">Blue</label>
-                                                <input type="radio" name="theme" id="blue">
-                                            </fieldset>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </table>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="tabs__tab" id="tab_2" data-tab-info>
-                            <br>
-                            <br>
-                            <h2 class="center setting_title setting_text">Check In Notification</h2>
-                            <br>
-                            <br>
-                            <table class="center setting_text">
-                                <tr>
-                                    <td class="check_title"><h3>Message</h3></td>
-                                    <td class="check_title"><h3>Time</h3></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Are You Okay ?</p></td>
-                                    <td><p>_____ - 24 Hour</p></td>
-                                </tr>
-                            </table>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="tabs__tab" id="tab_3" data-tab-info>
-                            <br>
-                            <br>
-                            <h2 class="center setting_title setting_text">Contacts</h2>
-                            <br>
-                            <br>
-                            <dl>
-                            <table class="center setting_text">
-                                <tr>
-                                    <td class="contact"><h3>Name</h3></td>
-                                    <td class="contact"><h3>Phone Number</h3></td>
-                                    <td class="contact"><h3>Type Of Contact</h3></td>
-                                </tr>
-                                <tr>
-                                    <td>____________</td>
-                                    <td>____________</td>
-                                    <td>____________</td>
-                                </tr>
-                                                            <tr>
-                                    <td>____________</td>
-                                    <td>____________</td>
-                                    <td>____________</td>
-                                </tr>
-                            </table>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="tabs__tab" id="tab_4" data-tab-info>
-                            <br>
-                            <br>
-                            <h2 class="center setting_title setting_text">Configure</h2>
-                            <br>
-                            <br>
-                            <table class="center setting_text">
-                                <tr>
-                                    <td class="config"><h3>Text To Speech</h3></td>
-                                    <td class="config"><h3>OFF</h3></td>
-                                </tr>
-                                <tr>
-                                    <td class="config"><h3>Voice Activation</h3></td>
-                                    <td class="config"><h3>OFF</h3></td>
-                                </tr>
-                                <tr>
-                                    <td class="config"><h3>Colour Blind</h3></td>
-                                    <td class="config"><h3>OFF</h3></td>
-                                </tr>
-                            </table>
-                            <br>
-                        </div>
-                        <div class="tabs__tab" id="tab_5" data-tab-info>
-                            <br>
-                            <br>
-                            <h2 class="center setting_title setting_text">Change Main Language</h2>
-                            <br>
-                            <br>
-                            <br>
-                            <table class="center setting_text" style="padding-bottom: 10px;">
-                                <tr>
-                                    <td class="lan"><h3>English</h3></td>
-                                    <td class="lan"><h3>⌄</h3></td>
-                                </tr>
-                            </table>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <!-- </div> -->
-</body>
 
-<script>
-    // function to get each tab details
-    const tabs = document.querySelectorAll('[data-tab-value]')
-    const tabInfos = document.querySelectorAll('[data-tab-info]')
+    <h2 class="center seconed_title">Your Ultimate Destination for Irresistible Pizzas!</h1>
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = document
-                .querySelector(tab.dataset.tabValue);
-            tabInfos.forEach(tabInfo => {
-                tabInfo.classList.remove('active')
-            })
-            target.classList.add('active');
-        })
-    })
-</script>
-</script>
+    <p class="center home_desc">This is the place where pizza dreams come true! Dive into a world of irresistible 
+        flavors with our mouthwatering selection of pizzas, including the timeless Margherita, zesty Pepperoni, 
+        tropical Hawaiian, veggie-packed Vegetarian, hearty Meat Lovers, smoky BBQ Chicken, loaded Supreme, and 
+        indulgent Four Cheese. Each bite is a celebration of quality ingredients and expert craftsmanship, promising 
+        a culinary adventure that satisfies every craving. Whether you're enjoying a cozy night in or hosting a 
+        gathering with friends, Pizzaria Online is your go-to destination for pizza perfection. Place your order 
+        now and let the feast begin! </p>
+    <br>
+    <br>
+    <br>
+
+
 
 {% endblock %}
