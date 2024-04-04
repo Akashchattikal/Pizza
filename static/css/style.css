@@ -55,11 +55,6 @@ nav:hover {
     transition: all 0.5s ease;
 }
 
-h1, h2 {
-    color: var(--clr-heading);
-    line-height: 1.1;
-}
-
 :root {
     --clr-body-bg: hsl(300, 100%, 99%);
     --clr-card-bg: hsl(300, 100%, 99%);
@@ -164,6 +159,8 @@ h1, h2 {
 
 .main_title {
     font-size: 80px;
+    color: var(--clr-heading);
+    line-height: 1.1;
 }
 
 .main_btn {
@@ -181,8 +178,9 @@ h1, h2 {
     padding-right: 150px;
 }
 
-.pizza_img:focus {
-    opacity: 0.7;
+.pizza_img:hover {
+    opacity: 0.5;
+    transition: all 0.5s ease;
 }
 
 .rounded {
@@ -219,8 +217,8 @@ h1, h2 {
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
-    row-gap: 15px;
-    column-gap: 15px;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .pizza_img {
@@ -245,6 +243,8 @@ h1, h2 {
     font-size: 200%;
     font-weight: 300;
     padding-top: 1%;
+    color: var(--clr-heading);
+    line-height: 1.1;
 }
 
 .home_desc {
@@ -253,4 +253,31 @@ h1, h2 {
     font-size: 130%;
     padding-top: 10%;
     font-weight: 3000;
+}
+
+table, th, td {
+    border:1px solid black;
+}
+
+.table_w-60 {
+    width: 60%;
+}
+
+.table_bg {
+    background-color: var(--clr-pizza-card);
+}
+
+.single_img {
+    width: 40%;
+    height: 40%;
+}
+
+.single_title {
+    padding-top: 10px;
+    font-size: 300%;
+    color: var(--clr-pizza-text);
+}
+
+.single_td {
+    padding-top: 10%;
 }
