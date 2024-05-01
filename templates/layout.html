@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body>
-    <header>&nbsp;</header>
-    <nav>{% include "nav.html" %}</nav>
-    <main>
-        {% block content %}
-        {% endblock %}
+<div class="container">
+    <body>
+        <header></header>
+        <div class="shadow1"></div>
 
-    </main>
-    <footer>Nobody Reads It</footer>
-</body>
+        <div class="shadow2"></div>
+        <nav>{% include "nav.html" %}</nav>
+        <main>
+            {% block content %}
+            {% endblock %}
+
+        </main>
+        <footer>Nobody Reads It</footer>
+    </body>
+</div>
 
 </html>

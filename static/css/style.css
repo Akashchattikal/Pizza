@@ -11,20 +11,15 @@
 * {
     margin: 0;
     padding: 0;
-    outline: none;
-    border: none;
     text-decoration: none;
     box-sizing: border-box;
 }
 
 body {
     background: var(--clr-body-bg);
-    min-height: 5000px;
-    padding-top: 70px;
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-    padding-left: 6%;
 }
 
 
@@ -33,94 +28,31 @@ footer {
     padding: 20px;
     margin-top: auto;
     background: var(--clr-footer);
+    z-index: 2;
+    color: #fff;
+    
+
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    background: var(--clr-nav-bg);
-    width: 90px;
-    overflow: hidden;
-    transition: width 0.2s linear;
-    box-shadow: 0 20px 35px rba(0, 0, 0, 0.1);
-    text-decoration: none;
-    user-select: none
-}
 
-nav:hover {
-    width: 280px;
-    transition: all 0.5s ease;
-}
 
 :root {
     --clr-body-bg: hsl(300, 100%, 99%);
     --clr-card-bg: hsl(300, 100%, 99%);
     --clr-text: hsl(210, 30%, 11%);
-    --clr-heading: hsl(210, 30%, 11%);
-    --clr-footer: hsl(206, 27%, 90%);
+    --clr-heading: hsl(0, 0%, 100%);
+    --clr-footer: hsla(208, 25%, 90%, 0.268);
     --clr-a-hover: hsl(240, 8%, 23%);
     --clr-nav-item: hsl(300, 100%, 99%);
     --clr-nav-bg: hsl(240, 6%, 20%);
-    --clr-pizza-card: hsla(240, 6%, 20%, 0.595);
-    --clr-pizza-text: hsl(300, 100%, 99%);
+    --clr-pizza-card: hsla(0, 0%, 100%, 0.153);
+    --clr-pizza-text: hsl(0, 0%, 79%);
+    --clr-home-text: hsl(0, 0%, 100%);
 }
 
 
 /** TEXT **/
 
-.a_nav {
-    position: relative;
-    color: var(--clr-text);
-    font-size: 14px;
-    display: table;
-    width: 300px;
-    padding: 10px;
-}
-
-.a_nav:hover {
-    background: var(--clr-a-hover);
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-}
-
-.logo {
-    text-align: center;
-    display: flex;
-    margin: 10px 0 0 10px;
-}
-
-.logo img {
-    width: 59px;
-    height: 55px;
-    border-radius: 50%;
-}
-
-.logo span {
-    font-weight: bold;
-    padding-left: 15px;
-    padding-top: 7px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.fas {
-    position: relative;
-    width: 70px;
-    height: 40px;
-    top: 14px;
-    font-size: 20px;
-    text-align: center;
-    color: var(--clr-nav-item);
-}
-
-.nav_item {
-    position: relative;
-    top: 12px;
-    margin-left: 10px;
-    color: var(--clr-nav-item);
-}
 
 .shadow {
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.6);
@@ -158,7 +90,7 @@ nav:hover {
 }
 
 .main_title {
-    font-size: 80px;
+    font-size: 300%;
     color: var(--clr-heading);
     line-height: 1.1;
 }
@@ -180,38 +112,39 @@ nav:hover {
 
 .pizza_img:hover {
     opacity: 0.5;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
 }
 
 .rounded {
     border-radius: 20px;
 }
 
-.shadow {
+.shadow_box {
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
 }
 
 .item_li {
     text-align: center;
-    font-size: 50px;
+    font-size: 160%;
     line-height: 100px;
     font-weight: bold;
     border: 7px solid rgba(255, 255, 255, 0);
 }
 
 .pizza_td {
-    width: 125px;
+    width: 1px;
     padding-left:10px;
     padding-top:35px;
     padding-right:10px;
 }
 
 .multiple-pizza {
-    width: 300px;
+    width: 200px;
+    height: 280px;
     background-color: var(--clr-pizza-card);
 }
 
-.container {
+.container_p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -219,14 +152,18 @@ nav:hover {
     justify-content: center;
     row-gap: 20px;
     column-gap: 20px;
+    padding: 6%;
+}
+
+.container_singlep {
 }
 
 .pizza_img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 200px;
-    width: 200px;
+    height: 60%;
+    width: 80%;
     border-radius: 20px;
     z-index: -1;
 }
@@ -240,7 +177,7 @@ nav:hover {
 }
 
 .seconed_title {
-    font-size: 200%;
+    font-size: 150%;
     font-weight: 300;
     padding-top: 1%;
     color: var(--clr-heading);
@@ -250,9 +187,10 @@ nav:hover {
 .home_desc {
     padding-left: 15%;
     padding-right: 15%;
-    font-size: 130%;
+    font-size: 100%;
     padding-top: 10%;
     font-weight: 3000;
+    color: var(--clr-home-text);
 }
 
 table, th, td {
@@ -260,7 +198,8 @@ table, th, td {
 }
 
 .table_w-60 {
-    width: 60%;
+    padding-top: 5%;
+    width: 100%;
 }
 
 .table_bg {
@@ -268,16 +207,358 @@ table, th, td {
 }
 
 .single_img {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
 }
 
 .single_title {
     padding-top: 10px;
-    font-size: 300%;
+    font-size: 200%;
+    color: var(--clr-pizza-text);
+}
+
+.single_p {
+    font-size: 90%;
+    color: var(--clr-pizza-text);
+}
+
+.single_h3 {
+    font-size: 120%;
     color: var(--clr-pizza-text);
 }
 
 .single_td {
     padding-top: 10%;
+}
+
+
+
+.container {
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  background-color: #485461;
+
+  background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+
+  overflow-x: hidden;
+
+  transform-style: preserve-3d;
+
+}
+
+.navbar {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  z-index: 10;
+
+  height: 3rem;
+
+}
+
+.menu {
+
+  max-width: 72rem;
+
+  width: 100%;
+
+  margin: 0 auto;
+
+  padding: 0 2rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: #fff;
+
+}
+
+.logo {
+
+  font-size: 1.1rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  line-height: 4rem;
+
+}
+
+.logo_img {
+  width: 10%;
+  height: 10%;
+}
+
+.hamburger-menu {
+
+  height: 4rem;
+
+  width: 3rem;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+}
+
+.bar {
+
+  width: 1.9rem;
+
+  height: 1.5px;
+
+  border-radius: 2px;
+
+  background-color: #eee;
+
+  transition: 0.5s;
+
+  position: relative;
+
+}
+
+.bar:before,
+
+.bar:after {
+
+  content: "";
+
+  position: absolute;
+
+  width: inherit;
+
+  height: inherit;
+
+  background-color: #eee;
+
+  transition: 0.5s;
+
+}
+
+.bar:before {
+
+  transform: translateY(-9px);
+
+}
+
+.bar:after {
+
+  transform: translateY(9px);
+
+}
+
+.main {
+
+  position: relative;
+
+  width: 100%;
+
+  left: 0;
+
+  z-index: 5;
+
+  overflow: hidden;
+
+  transform-origin: left;
+
+  transform-style: preserve-3d;
+
+  transition: 0.5s;
+
+}
+
+.home_bg {
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  background: url("https://img.freepik.com/premium-photo/photorealistic-pizza-by-ocean-creamy-delight-with-scenic-view_899449-467331.jpg") no-repeat top center / cover;
+
+  position: relative;
+
+}
+
+.all_pizza_bg {
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  background: url("https://img.freepik.com/premium-photo/photorealistic-pizza-by-ocean-creamy-delight-with-scenic-view_899449-467331.jpg") no-repeat top center / cover;
+
+  position: relative;
+
+}
+
+.pizza_bg {
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  background: url("https://img.freepik.com/premium-photo/photorealistic-pizza-by-ocean-creamy-delight-with-scenic-view_899449-467331.jpg") no-repeat top center / cover;
+
+  position: relative;
+
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(43, 51, 59, 0.8);
+  padding-top: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay_2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(43, 51, 59, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.7rem;
+}
+
+
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+
+.container.active .bar:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.container.active .bar:after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.container.active .main {
+  animation: main-animation 0.5s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+.links {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+.container.active .links a {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.5s;
+  background-color: white;
+}
+
+.shadow.one {
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.shadow.two {
+  z-index: -2;
+  opacity: 0.1;
 }

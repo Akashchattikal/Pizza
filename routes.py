@@ -1,9 +1,20 @@
-from flask import Flask, render_template, request, redirect, url_for, abort, \
-    session
+from flask import Flask, render_template
+
+# , request, redirect, url_for, abort, \ session
 
 import sqlite3
 
+from flask_sqlalchemy import SQLAlchemy
+
+
 app = Flask(__name__)
+
+app.secret_key = "correcthorsebatterystaple"
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///pizza.db"
+db = SQLAlchemy(app)
+
+import models
 
 
 # @app.route("/")
@@ -34,6 +45,8 @@ def all_pizzas():
     cur = conn.cursor()
     cur.execute('SELECT * FROM Pizza')
     pizzas = cur.fetchall()
+
+    # pizzas = db.models.Pizza.query.all()
     return render_template("all-pizzas.html", pizzas=pizzas)
 
 
